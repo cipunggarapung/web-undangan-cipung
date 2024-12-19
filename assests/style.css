@@ -1,0 +1,682 @@
+/* Color */
+:root {
+  --red: #bb3631;
+  --gold: #d5ad69;
+  --goldhover: #c9a463;
+}
+
+/* Font */
+@font-face {
+  font-family: "alsscrp";
+  src: url("../assests/font/als-script/alsscrp.ttf");
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes bungakanan {
+  0%,
+  100% {
+    transform: rotate(30deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(-30deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Pastikan elemen-elemen lainnya seperti gambar atau konten yang panjang tidak melewati batas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cover {
+  background-image: url("../assests/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20vh;
+  background-attachment: fixed;
+}
+
+.tittle {
+  color: #fffffc;
+  padding: 0 2rem;
+}
+
+.tittle img {
+  width: 30vh;
+}
+
+.tittle p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.tittle h1 {
+  font-family: alsscrp;
+  font-size: 3rem;
+  color: #fffffc;
+  margin-bottom: -1rem;
+  line-height: 4rem;
+}
+
+#main {
+  display: block;
+}
+.audio-icon-wrapper {
+  max-width: 100v;
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  position: fixed;
+  z-index: 99;
+  bottom: 1.5rem;
+  right: 25px;
+  cursor: pointer;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  color: rgb(185, 142, 62);
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+nav {
+  background-color: var(--gold);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+  z-index: 5;
+  position: fixed;
+  bottom: 1rem;
+  width: 60%;
+  margin-left: 25px;
+  border-bottom: var(--red) solid 3px;
+  border-radius: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #fffff0;
+  z-index: 2;
+}
+
+.countdown {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-image: url(../assests/img/bg-countdown.jpg);
+
+  background-size: cover;
+  background-position: bottom;
+}
+.countdown h2 {
+  margin-top: 2rem;
+  color: #fffffc;
+  font-family: alsscrp;
+  margin-bottom: 1em;
+}
+
+.countdown-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.days-container,
+.hours-container,
+.minutes-container,
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gold);
+  border: 5px solid var(--red);
+  font-size: 0.5rem;
+  width: 100px;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: var(--red);
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 2.5em;
+}
+
+.days-label,
+.hours-label,
+.minutes-label,
+.seconds-label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.quotes {
+  background-color: var(--red);
+  padding: 2rem 2rem;
+  font-size: 16px;
+  text-align: center;
+  color: #fffff0;
+  max-width: 100%;
+}
+
+.quotes .red {
+  color: var(--gold);
+}
+.quotes img {
+  width: 10rem;
+  margin-top: -2rem;
+}
+
+.pengantin {
+  z-index: -1;
+  padding: 4rem 0;
+  background-image: url(../assests/img/bg-pengantin.jpg);
+  background-repeat: no-repeat;
+
+  background-size: 40rem;
+  background-position: top;
+  justify-content: center;
+  align-items: center;
+}
+
+.pengantinprofile {
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+
+}
+
+.textpengantin h2 {
+  color: var(--red);
+  font-size: 3rem;
+  font-family: alsscrp;
+}
+.textpengantin p {
+  font-size: 16px;
+  color: var(--red);
+}
+.pengantin img {
+  width: 12rem;
+  height: 15rem;
+  border-radius: 20px;
+}
+
+.iconMedsos {
+  font-size: 1rem;
+  gap: 5px;
+  margin-top: 1rem;
+}
+
+.iconMedsos a i {
+  background-color: var(--gold);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #fffff0;
+  padding: 0.5rem 0.7rem;
+}
+
+.waktuLokasi {
+  background-color: var(--red);
+  color: var(--gold);
+  text-align: center;
+}
+
+.lokasi {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.lokasi iframe {
+  width: 20rem;
+  margin-top: -10px;
+}
+.lokasi h2 {
+  margin-top: 1rem;
+  font-family: alsscrp;
+  font-size: 2rem;
+}
+.lokasi p {
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+.lokasi a {
+  text-decoration: none;
+  background-color: var(--gold);
+  color: #fffff0;
+  padding: 10px 20px;
+  font-size: 12px;
+  border: solid var(--red) 2px;
+  border-radius: 0.5rem;
+}
+.lokasi a:hover {
+  background-color: var(--goldhover);
+}
+
+.gallery-container {
+  margin-top: -1rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  background-image: url(./img/bg-gallery.png);
+}
+
+.gallery-container h2 {
+  font-size: 2rem;
+  font-family: alsscrp;
+  margin-bottom: -1rem;
+  margin-top: 3rem;
+  color: var(--goldhover);
+}
+
+.gallery-section {
+  display: flex;
+  max-width: 100wh;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.gallery-section img {
+  width: auto;
+  height: 7rem;
+  filter: saturate(0);
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.gallery-section img:hover {
+  filter: saturate(1);
+}
+
+.gallery-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0.5rem;
+  padding: 30px 0;
+}
+
+.gallery-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+iframe {
+  width: 23.3rem;
+  height: 15rem;
+}
+.tamukhusus {
+  max-width: 100%;
+  overflow-x: auto; /* Mengizinkan scroll horizontal pada tabel */
+  box-sizing: border-box;
+  background-color: var(--gold);
+}
+.tamukhusus {
+  max-width: 100%;
+  max-width: 800px;
+  color: var(--gold);
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+.tamukhusus h2 {
+  font-family: alsscrp;
+  font-size: 2rem;
+  color: var(--red);
+}
+.tamukhusus table {
+  padding: 2rem 1rem;
+  max-width: 100%;
+  border-collapse: collapse;
+  background-size: cover;
+  background-position: left;
+}
+.tamukhusus table th,
+td {
+  padding: 1rem 1rem;
+  text-align: left;
+  width: 100%;
+  color: var(--gold);
+}
+
+.RSVP {
+  padding: 2rem 2rem 2rem 1rem;
+  color: var(--gold);
+  background-color: var(--red);
+}
+
+.RSVP h2 {
+  text-align: center;
+  font-family: alsscrp;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.flex-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flex-form-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-group label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  border: none;
+  border: 2px solid var(--gold);
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: hsl(
+    var(--input-focus-h),
+    var(--input-focus-s),
+    var(--input-focus-l)
+  );
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: var(--gold);
+  color: #fffff0;
+  padding: 10px 20px;
+  font-size: 12px;
+  border: solid var(--red) 2px;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--goldhover);
+}
+
+#datakehadiran {
+  margin-top: 2rem;
+}
+.RSVP .rsvpData {
+  overflow-y: auto;
+  max-width: 100%;
+  height: 20rem;
+  scrollbar-color: var(--gold) white;
+  background-size: contain;
+  background-position: 1rem 2rem;
+}
+table {
+  max-width: 100%;
+  background-color: var(--red);
+  color: #fffff0;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table,
+th,
+td {
+  border: 2px solid var(--gold);
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.story {
+  color: white;
+  background-color: var(--gold);
+  text-align: center;
+}
+
+section .story h2 {
+  font-family: alsscrp;
+  color: var(--red);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.scroll-story {
+  overflow-x: scroll;
+}
+.carousel-story {
+  overflow-x: scroll;
+  display: flex;
+  width: 70rem;
+}
+.story-text {
+  width: 50rem;
+  padding: 2rem;
+  background-color: #bb3631;
+  color: var(--gold);
+}
+
+section .story .fotostory {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 1rem;
+  justify-content: center;
+}
+
+section .story .fotostory img {
+  max-width: 100%;
+}
+
+section .gift {
+  padding: 4rem 1rem;
+  margin-top: -2rem;
+  text-align: center;
+  background-color: var(--gold);
+}
+
+section .gift h2 {
+  color: var(--red);
+  font-family: alsscrp;
+  font-size: 2rem;
+}
+
+.gift p {
+  margin-bottom: 1rem;
+  color: var(--red);
+}
+
+section .gift .gifts-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.payment {
+  z-index: 3;
+}
+.payment p {
+  margin-top: 0.5rem;
+  color: var(--red);
+}
+.gifts-content .payment img {
+  width: 7rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+  filter: grayscale(1);
+}
+
+.gifts-content img:hover {
+  filter: grayscale(0);
+}
+
+.massages {
+  max-width: 100%;
+  padding: 2rem 2rem 2rem 1rem;
+  background-image: url(./img/bg-massage.png);
+  background-size: cover;
+  background-position: right;
+  color: var(--red);
+  margin: -2rem 0;
+}
+
+.massages h2 {
+  text-align: center;
+  font-family: alsscrp;
+  font-size: 2rem;
+}
+
+.massages h3 {
+  margin-top: 2rem;
+}
+.section-messages form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-messages label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.section-messages textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  min-height: 80px;
+  resize: vertical;
+}
+.thanks {
+  padding: 2rem 1rem 7rem 1rem;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--red);
+}
+
+.thanks h2 {
+  font-family: alsscrp;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.thanks p {
+  color: var(--gold);
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 400px) {
+}
